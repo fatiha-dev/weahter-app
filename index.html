@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="reset.css">
+    <link type="module" rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Dancing+Script:wght@500&family=Mulish&family=Noto+Sans:wght@300&family=Poppins:wght@300;400&family=Rubik:wght@500&family=Telex&display=swap');
+      </style>
+</head>
+<body>
+    <div class="container">
+        <header class="search-sect flex">
+            <input  class="srch-input"
+                    type="text" name="search" 
+                    id="search" placeholder="search...">
+            <span>
+                <button>
+                    <img class="icon-2 srch-btn" src="imgs/loupe.png" alt="">                </button>
+            </span> 
+        </header>
+        <section class="day-section">
+            <div class="today">
+                <div class="card flex">
+                    <div class="few">
+                        <h3 class="city lh fs-1 " data-location>Beni Mellal</h3>
+                        <h3 class="date lh fs-2 "><span class="fw-6" data-current-day>Thu</span> 
+                            <span data-current-time>12:00</span></h3>
+                        <img src="imgs/cloudy.png" data-current-icon>
+                        <h3 class="degree fs-4">
+                            <span data-current-temp></span>
+                            <sup>&deg;</sup></h3>
+                    </div>
+                    <div class="more flex fs-1">
+                        <div>
+                            <div class=" details flex">
+                                <img class="icon-2" src="imgs/rainy.png">
+                                <span class="" data-current-rain>80</span>
+                                <sup>&percnt;</sup>
+                            </div>
+                            <div class=" details flex">
+                                <img class="icon-2" src="imgs/humidity.png" >
+                                <span data-current-humidity>80</span>
+                                <sup>&percnt;</sup>
+                            </div>
+                            <div class="details flex pad">
+                                <img class="icon-2" src="imgs/wind.png" >
+                                <span data-current-wind>120</span>
+                                <span>Km/h</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="details flex">
+                                <span>min</span>
+                                <span class="min fs-2" data-current-min>12<sup>&deg;</sup></span>
+                            </div>
+                            <div class="details flex">
+                                <span>max</span>
+                                <span class="max fs-2" data-current-max>18<sup>&deg;</sup></span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="next-days grid" data-day-section>
+                <div class="day-card flex">
+                    <div class="day-card--day" data-date>Wed</div>
+                    <img data-icon src="imgs/rain.png" alt="icon">
+                    <div>
+                    <span>12</span><sup>&deg;</sup>
+                    <span>20</span><sup>&deg;</sup>
+                    </div>
+                </div>
+                <div class="day-card flex">
+                    <h3>Fri</h3>
+                    <img src="imgs/rain.png" alt="">
+                    <span>
+                        12<sup>&deg;</sup>
+                        16<sup>&deg;</sup>
+                    </span>
+                    
+                </div>
+                <div class="day-card flex">
+                    <h3>Sun</h3>
+                    <img src="imgs/rain.png" alt="">
+                    <span>
+                        12<sup>&deg;</sup>
+                        16<sup>&deg;</sup>
+                    </span>
+                    
+                </div>
+                <div class="day-card flex">
+                    <h3>Sat</h3>
+                    <img src="imgs/rain.png" alt="">
+                    <span>
+                        12<sup>&deg;</sup>
+                        16<sup>&deg;</sup>
+                    </span>
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HOURLY DATA -->
+        <table class="hour-section ">
+            <thead>
+                <tr class="hour-row--th ">
+                    <td>
+                        <span class="label fw-6">Time</span>
+                    </td>
+                    <td>
+                        <span class="label fw-6"></span>
+                    </td>
+                    <td>
+                        <span class="label fw-6">Temp.(&deg; C)</span>
+                    </td>
+                    <td>
+                        <span class="label fw-6">Precip.(&percnt;)</span>
+                    </td>
+                    <td>
+                        <span class="label fw-6">Humidity(&percnt;)</span>
+                    </td>
+                    <td>
+                        <span class="label fw-6">Wind(Km/h)</span>
+                    </td>
+                </tr>
+            </thead>
+            <tbody data-hour-section>
+                <tr class="hour-row">
+                    <td class="td-info">12:00</td>
+                    <td class="td-info"><img src="public/imgs/rain (1).png" alt="icon"></td>
+                    <td class="td-info">12</td>
+                    <td class="td-info">45</td>
+                    <td class="td-info">60</td>
+                    <td class="td-info">120</td>
+                </tr>
+                <tr class="hour-row">
+                    <td class="td-info">12:00</td>
+                    <td class="td-info"><img src="public/imgs/rain (1).png" alt="icon"></td>
+                    <td class="td-info">12</td>
+                    <td class="td-info">45</td>
+                    <td class="td-info">60</td>
+                    <td class="td-info">120</td>
+                </tr>
+                <tr class="hour-row">
+                    <td class="td-info">12:00</td>
+                    <td class="td-info"><img src="public/imgs/rain (1).png" alt="icon"></td>
+                    <td class="td-info">12</td>
+                    <td class="td-info">45</td>
+                    <td class="td-info">60</td>
+                    <td class="td-info">120</td>
+                </tr>
+                <tr class="hour-row">
+                    <td class="td-info">12:00</td>
+                    <td class="td-info"><img src="public/imgs/rain (1).png" alt="icon"></td>
+                    <td class="td-info">12</td>
+                    <td class="td-info">45</td>
+                    <td class="td-info">60</td>
+                    <td class="td-info">120</td>
+                </tr>
+                <tr class="hour-row">
+                    <td class="td-info">12:00</td>
+                    <td class="td-info"><img src="public/imgs/rain (1).png" alt="icon"></td>
+                    <td class="td-info">12</td>
+                    <td class="td-info">45</td>
+                    <td class="td-info">60</td>
+                    <td class="td-info">120</td>
+                </tr>
+                
+                
+            </tbody>
+        </table>
+
+<!--TEMPLATES  -->
+
+        <template id="day-card-template">
+            <div class="day-card flex">
+                <div class="day-card--day" data-date></div>
+                <img data-icon alt="icon">
+            <div>
+            <span data-temp-max></span><sup>&deg;</sup>
+            <span data-temp-min></span><sup>&deg;</sup>
+        </div>
+    </div>
+        </template>
+        <template id="hour-row-template">
+            <tr class="hour-row">
+                <td class="td-info" ><span data-time></span></td>
+                <td class="td-info"><img dat-icon alt="icon"></td>
+                <td class="td-info"><spanv data-temp></span></td>
+                <td class="td-info"><span data-precip></span></td>
+                <td class="td-info"><span data-humidity></span></td>
+                <td class="td-info"><span data-wind></span></td>
+            </tr>
+        </template>
+        <script type="module" src="main.js"></script>
+    </div>
+</body>
+</html>
