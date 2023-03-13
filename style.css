@@ -1,0 +1,162 @@
+:root {
+    --main-color: rgb(19, 29, 32);
+    --cold: rgb(54, 17, 218);
+    --hot:rgb(255, 0, 0);
+    --bg:rgba(255, 255, 255, 0.06);
+    --light-blue: hsl(200,100%,95%);
+    --dark-blue: hsl(200,100%,10%)
+}
+*,
+::before,
+::after {
+    margin:0;
+    padding: 0;
+}
+/* utility classes */
+
+.letter-spacing-1 {
+    letter-spacing: 1ch;  
+}
+.letter-spacing-3 {
+    letter-spacing: 3ch;
+}
+.lh {
+    line-height: 1.6rem;
+}
+.fs-4 {
+    font-size: 4rem;
+}
+.fs-3 {
+    font-size: 2rem;
+}
+.fs-2 {
+    font-size: 1.2rem;
+}
+.fs-1 {
+    font-size: .8rem;
+}
+
+.fw-6 {
+    font-weight: 600;
+}
+.icon-2 {
+    width: 1.4rem;
+    padding-top: 2px;
+    object-fit: contain;
+}
+
+.pad {
+    padding-block-end: 2rem;
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+img {
+    max-width: 4rem;
+}
+body{
+    
+    background: url(imgs/billy-huynh-v9bnfMCyKbg-unsplash.jpg) no-repeat center
+    center fixed;
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;  
+}
+.search-sect {
+    justify-content: center;
+    color: var(--main-color);
+}
+.srch-input {
+    border-bottom: 2px solid rgb(105, 102, 102);
+    margin-block: .4rem;
+    width: 6rem;
+    color:rgb(34, 32, 32) ;
+}
+.srch-btn {
+    margin-top: 3px;
+}
+.card {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    justify-content: space-between;
+    width: 70vw;
+    height: 50vh;
+    background-color: var(--bg);
+    margin: auto;
+    inset: 0;
+    backdrop-filter: blur(1.5rem);
+    box-shadow: 1rem 1rem 1.1rem rgba(0,0,0, 0.06);
+}
+.more {
+    flex-direction: column;
+    gap: .6rem;
+    align-items: flex-start;
+    padding-block: 1rem;
+}
+.details {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem;
+}
+.min {
+    color:var(--cold);
+}
+.max {
+    color:var(--hot);
+}
+.next-hours {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container {
+    border: .4rem solid black;
+}
+.next-days {
+    grid-template-columns: repeat(auto-fit, 10rem);
+    gap: .5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+.day-card {
+    width: 10rem;
+    height: 10rem;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+    backdrop-filter: blur(1.5rem);
+    gap: 1rem;
+}
+.hour-section {
+    width:100%;
+    border-spacing: 0;
+}
+.hour-row--th {
+    color: var(--dark-blue);
+    backdrop-filter: blur(10rem);
+}
+.hour-row--th > td {
+    padding: 1rem;
+}
+.hour-row {
+    backdrop-filter: blur(1.5rem);
+
+}
+.hour-row:nth-child(2n) {
+    background-color: var(--bg);
+    backdrop-filter: blur(4rem);
+}
+.hour-row > td {
+    padding: .5rem 0.5rem;
+}
+td {
+    text-align: center;
+    margin: auto;
+    
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: small;
+}
